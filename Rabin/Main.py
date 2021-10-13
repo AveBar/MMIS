@@ -1,4 +1,4 @@
-import prime
+import Prime
 import Rabin
 
 
