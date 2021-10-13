@@ -2,32 +2,23 @@ import random
 import math
 
 def modular_pow(base, exponent,modulus):
+	result = 1
 
-	  result = 1
-
-	  while (exponent > 0):
-	
-		    if (exponent & 1):
-			    result = (result * base) % modulus
-
-		  exponent = exponent >> 1
-
-		  base = (base * base) % modulus
+	while (exponent > 0):
+		if (exponent & 1):
+			result = (result * base) % modulus
+		exponent = exponent >> 1
+		base = (base * base) % modulus
 	
 import random
 import math
 
-  def modular_pow(base, exponent,modulus):
-
-	  result = 1
-
-	  while (exponent > 0):
-	
-		    if (exponent & 1):
-			    result = (result * base) % modulus
-
+def modular_pow(base, exponent,modulus):
+	result = 1
+	while (exponent > 0):
+		if (exponent & 1):
+			result = (result * base) % modulus
 		exponent = exponent >> 1
-
 		base = (base * base) % modulus
 	
 	return result
@@ -50,10 +41,8 @@ def PollardRho( n):
 	while (d == 1):
 	
 		x = (modular_pow(x, 2, n) + c + n)%n
-
 		y = (modular_pow(y, 2, n) + c + n)%n
 		y = (modular_pow(y, 2, n) + c + n)%n
-
 		d = math.gcd(abs(x - y), n)
 
 		if (d == n):
@@ -62,6 +51,5 @@ def PollardRho( n):
 	return d
 
 if __name__ == "__main__":
-
 	n = 10967535067
 	print("Один из делителей для", n , "is ",PollardRho(n))
