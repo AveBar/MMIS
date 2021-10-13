@@ -1,4 +1,4 @@
-/* передает уравнение вида a*x+b=0 */
+/* передает уравнение вида a * x + b = 0 */
 packageend;
 
 import java.math.BigInteger;
@@ -13,11 +13,11 @@ public class Task_3 {
         BigInteger B = BigInteger.valueOf(Integer.valueOf(b));
         if (a != 0) {
             BigInteger X = (Bdivide(A)).multiply(BigInteger.valueOf(-));
-            System.out.println("x = " + X + " уравнениея");
+            System.out.println("x = " + X + " уравнение.");
  } else if (b != 0) {
-            System.out.println("решения нет");
+            System.out.println("Решения нет");
  } else {
-            System.out.println("X любое число");
+            System.out.println("X - любое число");
         }
     }
 }
