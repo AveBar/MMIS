@@ -4,20 +4,20 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class RSA {
-    private static long simpleOne = 4;
+    private static long simpleOne = 7;
     private static long simpleTwo = 11;
-    private static ArrayList<Long> list = Task_5.eratosfenPrimes((int) Math.pow(2, 10));
+    private static ArrayList<Long> list = Task_5.eratosfenPrimes((int) Math.pow(3, 10));
     private final static char[] Alpha = {'а', 'б', 'в', 'г', 'д', 'е', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я'};
     private final static byte[] pos = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32};
 
     public static void main(String[] args) {
         long multiplication = simpleOne * simpleTwo;
         long functionEller = (simpleOne - 1) * (simpleTwo - 1);
-        System.out.println("эллер = " + functionEller);
+        System.out.println("Эллер = " + functionEller);
         long number_E = chooseNumber(functionEller);
-        System.out.println("чилос е " + number_E);
+        System.out.println("Чилос 'е' " + number_E);
         long protectKey = chooseProtectKey(functionEller, number_E);
-        System.out.println("число d " + protectKey);
+        System.out.println("Число 'd' " + protectKey);
         long letter = cipherLetter('б', number_E, multiplication);
         System.out.println(openMessage(letter, protectKey, multiplication));
     }
