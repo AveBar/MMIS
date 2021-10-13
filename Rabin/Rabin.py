@@ -1,4 +1,4 @@
-import prime
+import Prime
 
 def encryption(plaintext, n):
     plaintext = padding(plaintext)
